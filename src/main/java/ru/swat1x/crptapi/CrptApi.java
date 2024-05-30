@@ -80,7 +80,7 @@ public class CrptApi {
       var instant = System.currentTimeMillis();
 
       if (requests.size() < requestLimit + 1) {
-        requests.add(instant);
+        requests.add(0, instant);
         return true;
       } else {
         // определяем порог запросов исходя из тайм юнита
